@@ -27,10 +27,9 @@ def Pyramid(integer):
     for i in range(integer,0,-1):            #digit column
         for j in range(i):                  #space
             print("   ", end = "")
-        for k in range(integer-i+1,0,-1):       #print inverse
-            print(format(k,">3d"), end = "")
-        for n in range(1,integer-i+1):        #print positive
-            print(format(n+1,">3d"), end = "")
+        for k in range(-(integer-i+1), (integer-i+1)+1):
+            if(k != 0 and k != 1):
+                print(format(abs(k),">3d"), end = "")
         print("\n")
 
 def Triangle(integer):
@@ -61,7 +60,7 @@ def Triangle(integer):
         for k in range(i):
             print(format(k+1,">3d"), end = "")
         print("\n")
-                
+'''                
 #Problem 9
 money = 10000
 Study_loans(money)
@@ -69,12 +68,12 @@ Study_loans(money)
 #Problem 11
 students = eval(input("Enter the number of students: "))
 Find_Pole(students)
-
+'''
 #Problem 19
 integer = eval(input("Enter integer(1 to 15) to show the pyramid: "))
 Pyramid(integer) 
-
+'''
 #Problem 20
 integer = eval(input('Please enter a positive integer:  '))
 Triangle(integer)
-
+'''
