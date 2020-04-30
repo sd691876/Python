@@ -9,7 +9,7 @@ def Arithmetic_Geometric_Mean_Inequality(point):
     [x,y]= point
     max_x = 200
     max_y = 100
-    if(0<=x*y<=(max_x/2)*(max_y/2) and x<=max_x and y<=max_y):
+    if(0<=x*y<=(max_x/2)*(max_y/2) and 0<=x<=max_x and 0<=y<=max_y):
         print('The point is in the triangle')
     else:
         print('The point is not in the triangle')
@@ -46,7 +46,7 @@ if(0<=digit<=15):
     Base_transform(digit)
 else:
     print('Invalid input')
-
+'''
 #Problem 34
 character = input('Enter a hexadecima character: ')
 while(len(character)!=1):
@@ -55,3 +55,4 @@ if(48<=ord(character)<=57 or 65<=ord(character)<=70):
     Base_transform(character)
 else:
     print('Invalid input')
+'''
