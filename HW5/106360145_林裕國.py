@@ -30,8 +30,8 @@ def Pyramid(integer):
         for k in range(-(integer-i+1), (integer-i+1)+1):
             if(k != 0 and k != 1):
                 print(format(abs(k),">3d"), end = "")
-        print("\n")
-
+        print("")
+'''
 def Triangle(integer):
     print("Pattern A\n")
     for i in range(integer,0,-1):
@@ -60,7 +60,7 @@ def Triangle(integer):
         for k in range(i):
             print(format(k+1,">3d"), end = "")
         print("\n")
-'''                
+'''              
 #Problem 9
 money = 10000
 Study_loans(money)
@@ -68,7 +68,7 @@ Study_loans(money)
 #Problem 11
 students = eval(input("Enter the number of students: "))
 Find_Pole(students)
-'''
+
 #Problem 19
 integer = eval(input("Enter integer(1 to 15) to show the pyramid: "))
 Pyramid(integer) 
