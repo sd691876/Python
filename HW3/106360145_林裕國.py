@@ -33,7 +33,7 @@ def boxing_result(p_boxing, c_boxing):
     else:
         print("The computer is {:s}. You are {:s} too. You lost!" \
               .format(boxing[c_boxing],boxing[p_boxing]))
-
+'''
 #Problem 1
 coefficient = [int(num) for num in input("Enter a, b, c: ").split(",")]
 while(len(coefficient)!=3):
@@ -52,27 +52,21 @@ integer.sort()
 print("The sorted numbers are ",end="")
 for i in range(0,len(integer)):
     print(integer[i],end=" ")
-
+'''
 #Problem 15
 lottery_number = str(randint(100,999))
 print("Lottery is ",int(lottery_number))
 predict_lottery = input("Enter your lottery pick(three digits): ")
 if(lottery_number==predict_lottery):
     print("Exact match: you win $10,000")
+elif(sorted(lottery_number) == sorted(predict_lottery)):
+    print("Match all digits: you win $3,000")
+elif(set(lottery_number).intersection(set(predict_lottery))):
+    print("Match one digit: you win $1,000")
 else:
-    count = 0
-    for i in range(0,len(lottery_number)):
-        for j in range(0,len(predict_lottery)):
-            if(lottery_number[i]==predict_lottery[j]):
-                count+=1
-                continue
-    if(count==3):
-      print("Match all digits: you win $3,000")
-    elif(count!=0):
-      print("Match one digit: you win $1,000")
-    else:
-      print("Sorry, no match")  
-
+    print('sorry, no match')
+        
+'''
 #Problem 17
 p_boxing = eval(input("scissor(0), rock(1), paper(2): "))
 c_boxing = randint(0,2)
@@ -82,3 +76,4 @@ boxing_result(p_boxing, c_boxing)
 Magnitude = ["Ace", "2", "3", "4", "5", "6", "7", "8", "9", "10", "Jack", "Queen", "King"]
 Type      = ["Clubs", "Diamonds", "Hearts", "Spades"]
 print("The card you picked is {:s} of {:s}".format(choice(Magnitude),choice(Type)))
+'''
