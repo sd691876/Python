@@ -34,7 +34,7 @@ def boxing_result(p_boxing, c_boxing):
         computer_win = 1
         print("You lost")
     return user_win, computer_win
-
+'''
 #3    
 number = []
 for i in range(0,10):
@@ -51,10 +51,10 @@ print('Perfect number less than 10000 is: ',end = "")
 for i in range(len(t)):
     print(t[i], end = " ")
 print("")
-
+'''
 #5
 count_user = 0
-count_computer = 1
+count_computer = 0
 while(1):
     c_boxing = randint(0,2)
     print(c_boxing+1)
@@ -62,8 +62,17 @@ while(1):
     user_win, computer_win = boxing_result(p_boxing-1, c_boxing)
     count_user += user_win
     count_computer += computer_win
-    if(count_user > count_computer*2 ):
+    if(count_user==3 and count_computer==0):
         print('You won more than two times')
+        break
+    if(count_user > count_computer*2 and count_computer!=0):
+        print('You won more than two times')
+        break
+    if(count_computer==3 and count_user==0):
+        print('Computer won more than two times')
+        break
+    if(count_computer > count_user*2 and count_user !=0):
+        print('Computer won more than two times')
         break
     
     
