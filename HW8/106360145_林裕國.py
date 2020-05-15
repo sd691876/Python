@@ -1,3 +1,5 @@
+from random import randint
+import numpy as np
 def Countime(integers):
     integers.sort()
     integers.append(-1)
@@ -20,6 +22,13 @@ def Distinct(numbers):
             dn.append(numbers[i])
     print('The distinct number are {0}'.format(dn))
 
+def Randcount():
+    counts = np.zeros(10, dtype = np.int)
+    for i in range(1000):
+        counts[randint(0,9)] += 1
+    for j in range(10):
+        print('{0} number {1}'.format(j,counts[j]))
+
 def indexOfSmallestElement (lst):
     minimum = min(lst)
     print('The index of the smallest element is {0}'.format(lst.index(minimum)))
@@ -34,7 +43,7 @@ def eliminateDuplicates(lst):
         if(lst[i] not in dn):
             dn.append(lst[i])
     print('The distinct numbers are: {0}'.format(dn))
- 
+
 #Problem 3
 integers = [int(num) for num in input('Enter the integers between 1 and 100: ').split(' ')]
 Countime(integers)
@@ -45,7 +54,7 @@ Distinct(numbers)
 
 
 #Problem 7
-
+Randcount()
 
 #Problem 8
 element = [int(num) for num in \
@@ -56,3 +65,4 @@ indexOfGreatestElement (element)
 #Problem 13
 numbers = [int(num) for num in input('Enter ten numbers: ').split(' ')]
 eliminateDuplicates(numbers)
+
