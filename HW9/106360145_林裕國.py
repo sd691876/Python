@@ -56,17 +56,17 @@ def Q8():
         print("File", filename, "does not exits")
         sys.exit()
     infile = open(filename, "r", encoding='utf-8')
-    text = infile.read().split()
+    text = infile.read().encode('utf-8').decode('utf-8-sig').split()
     reg_word = []
     for word in text:
         if word not in reg_word:
             reg_word.append(word)
-    text.sort()
-    print(reg_word)
-    print(len(reg_word))
-    print(text)
-    return reg_word
-'''
+    reg_word.sort()
+    for word in reg_word:
+        print(word,end=" ")
+    print("")
+
+
 #Problem 1
 Q1()
 
@@ -75,6 +75,6 @@ Q2()
    
 #Problem 3
 Q3()                     
-'''
+
 #Problem 8
-A = Q8()
+Q8()
