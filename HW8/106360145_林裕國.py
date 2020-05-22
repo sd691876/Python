@@ -52,7 +52,6 @@ Countime(integers)
 numbers = [int(num) for num in input('Enter the numbers: ').split(' ')]
 Distinct(numbers)
 
-
 #Problem 7
 Randcount()
 
