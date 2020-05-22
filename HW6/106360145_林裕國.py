@@ -24,7 +24,6 @@ def Commission(amount):
     print('The sales amount $',money)
     print('is need to make a commission of $',amount)
     
-
 def Find_max():
     count = 1
     reg   = 1
